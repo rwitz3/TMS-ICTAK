@@ -57,10 +57,10 @@
       <input type="text" placeholder="Current Company Name" class="form-control" formControlName="currentcompanyname" 
       [ngClass]="{'is-invalid':submit&&f.currentcompanyname.errors}">
         <div *ngIf='submit&&f.currentcompanyname.errors' class="invalid-feedback">
-          <!-- <div *ngIf='f.currentcompanyname.errors'>Current Company N is  required</div> -->
+          
         </div>
 
-        <label>Current Designation</label>
+        <label> Current Designation</label>
         <input type="text" placeholder="Current Designation" class="form-control" formControlName="currentdesignation" 
         [ngClass]="{'is-invalid':submit&&f.currentdesignation.errors}">
           <div *ngIf='submit&&f.currentdesignation.errors' class="invalid-feedback">
@@ -68,7 +68,7 @@
           </div>
   
           <label for="courses">ICTAK Courses Handling</label>
-          <select class="form-control" formControlName="courses" >
+          <select class="form-control" formControlName="courses" [ngClass]="{'is-invalid':submit&&f.courses.errors}" >
             <option disabled>Select Courses</option>
             <option >Choose Course</option>
             <option *ngFor="let i of courselist">{{i}}</option>
@@ -77,7 +77,7 @@
         <div *ngIf="f.courses.errors?.['required']">course is required</div>
       </div>
 
-
-    <button type="submit" class="btn btn-success">Submit</button>
+<br>
+      <button type="submit" class="btn btn-success">Submit</button>
   </form>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
+import { TrainerService } from '../trainer.service';
 
 @Component({
   selector: 'app-enrollmentform',
